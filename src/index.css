@@ -1,18 +1,22 @@
-.pink {
-  background-color: pink;
+.blue {
+  background-color: rgba(0, 191, 255, 0.226);
   color: black !important;
   display: grid;
   justify-content: center;
   align-items: center;
-  height: 10em;
-  margin: 2em;
-}
-
-.blue {
-  background-color: deepskyblue;
-  padding: 1em 2em;
+  height: 5em;
+  margin: 1.5em;
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: gold;
+  padding: 1em;
+}
+
+.center {
+  display: flex;
+  justify-content: center !important;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(255, 20, 145, 0.205);
 }
