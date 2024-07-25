@@ -3,7 +3,8 @@ import { useDraggable } from "@dnd-kit/core";
 
 export function Draggable(props) {
   const { attributes, listeners, setNodeRef, transform } = useDraggable({
-    id: "draggable",
+    //id: "draggable",
+    id: props.id,
   });
   const style = transform
     ? {
@@ -12,13 +13,7 @@ export function Draggable(props) {
     : undefined;
 
   return (
-    <button
-      ref={setNodeRef}
-      style={style}
-      {...listeners}
-      {...attributes}
-      className="blue"
-    >
+    <button ref={setNodeRef} style={style} {...listeners} {...attributes} className="yellow">
       {props.children}
     </button>
   );
