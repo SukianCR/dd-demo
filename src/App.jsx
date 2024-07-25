@@ -6,18 +6,25 @@ import { Draggable } from "./Draggable";
 function App() {
   const containers = ["A", "B", "C", "D", "E", "F"];
   const [parent, setParent] = useState(null);
+  
   const draggableMarkup = <Draggable id="draggable">Drag me</Draggable>;
+  
 
   return (
     <DndContext onDragEnd={handleDragEnd}>
       {parent === null ? draggableMarkup : null}
+   
       <div className="center">
         {containers.map((id) => (
           // We updated the Droppable component so it would accept an `id`
           // prop and pass it to `useDroppable`
+          <>
           <Droppable key={id} id={id}>
             {parent === id ? draggableMarkup : "Drop here"}
+            
           </Droppable>
+             
+           </>
         ))}
       </div>
     </DndContext>
