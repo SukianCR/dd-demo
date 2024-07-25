@@ -4,10 +4,15 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  height: 30em;
+  height: 10em;
+  margin: 2em;
 }
 
 .blue {
   background-color: deepskyblue;
   padding: 1em 2em;
+}
+
+.yellow {
+  background-color: yellow;
 }
