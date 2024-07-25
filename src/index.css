@@ -1,0 +1,13 @@
+.pink {
+  background-color: pink;
+  color: black !important;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 30em;
+}
+
+.blue {
+  background-color: deepskyblue;
+  padding: 1em 2em;
+}
