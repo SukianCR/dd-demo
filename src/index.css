@@ -13,10 +13,29 @@
   padding: 1em;
 }
 
+.space-around {
+  display: flex;
+  justify-content: space-around !important;
+
+  padding: 2em;
+  width: 50%;
+}
+
 .center {
   display: flex;
   justify-content: center !important;
-  flex-direction: column;
-  width: 100%;
-  background-color: rgba(255, 20, 145, 0.1);
+}
+
+.plant {
+  padding: 1em;
+  margin: 1em;
+  border: 1px solid black;
+  background-color: blanchedalmond;
+  text-align: center;
+}
+
+.garden {
+  background-color: rgba(0, 191, 255, 0.336);
+  width: 50em;
+  height: 50em;
 }
