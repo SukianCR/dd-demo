@@ -44,7 +44,7 @@ function App() {
     },
   ];
 
-  // const [parent, setParent] = useState(null);
+  const [parent, setParent] = useState(null);
 
   const [plantsInGarden, setPlantsInGarden] = useState([]);
   console.log(plantsInGarden);
@@ -60,23 +60,20 @@ function App() {
     <DndContext onDragEnd={addPlantsToGarden}>
       <div className="center">
         <main className="space-around">
-          <div className="garden center">
+          <div className="garden_shell_a">
             <Droppable items={plantsInGarden} />
           </div>
 
-          <div className="plant-list center">
-            <ul>
-              {plants.map((plant) => {
-                return (
-                  <div key={plant.id} className="plant">
-                    <Draggable key={plant.id} plant={plant}>
-                      {/* {plant} */}
-                      {plant.name}
-                    </Draggable>
-                  </div>
-                );
-              })}
-            </ul>
+          <div className="plant_list">
+            {plants.map((plant) => {
+              return (
+                <div key={plant.id}>
+                  <Draggable key={plant.id} plant={plant}>
+                    {plant.name}
+                  </Draggable>
+                </div>
+              );
+            })}
           </div>
         </main>
       </div>
@@ -95,7 +92,6 @@ function App() {
 
     temp.push(npo);
     setPlantsInGarden(temp);
-    console.log("array after set", plantsInGarden);
 
     // const { over } = event;
     // setParent(over ? over.id : null);

@@ -19,10 +19,11 @@ export function Droppable(props) {
   //console.log("viene el array", plantsIG);
 
   return (
-    <div ref={setNodeRef}>
+    <div ref={setNodeRef} className="garden_shell">
       {plantsIG.map((plant, idx) => (
         //<div key={item.id} className="plant">
-        <div key={`${plant.id}-${idx}`} className="plant">
+        // <div key={`${plant.id}-${idx}`} className="plant">
+        <div key={`${plant.id}`} className="plant">
           {plant.name}
         </div>
       ))}
